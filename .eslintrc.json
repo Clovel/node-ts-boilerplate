@@ -1,0 +1,174 @@
+{
+    "root": true,
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "parser": "@typescript-eslint/parser",
+        "ecmaFeatures": {
+        "jsx": true
+        },
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "./"
+    },
+    "rules": {
+        "semi": [
+        "error",
+        "always"
+        ],
+        "eqeqeq": "error",
+        "indent": [
+        "error",
+        2,
+        {
+            "SwitchCase": 1
+        }
+        ],
+        "multiline-ternary": [
+        "warn",
+        "always-multiline"
+        ],
+        "comma-dangle": [
+        "error",
+        {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "only-multiline"
+        }
+        ],
+        "quotes": [
+        "error",
+        "single",
+        {
+            "avoidEscape": true,
+            "allowTemplateLiterals": true
+        }
+        ],
+        "object-curly-spacing": [
+        "warn",
+        "always",
+        {
+            "objectsInObjects": false,
+            "arraysInObjects": false
+        }
+        ],
+        "space-before-function-paren": [
+        "warn",
+        {
+            "anonymous": "always",
+            "named": "never",
+            "asyncArrow": "always"
+        }
+        ],
+        "keyword-spacing": [
+        "error",
+        {
+            "before": true,
+            "after": true,
+            "overrides": {
+            "if": {
+                "after": false
+            },
+            "switch": {
+                "after": false
+            },
+            "for": {
+                "after": false
+            },
+            "while": {
+                "after": false
+            },
+            "catch": {
+                "after": false
+            }
+            }
+        }
+        ],
+        "space-before-blocks": [
+        "error"
+        ],
+        // "prettier/prettier": [
+        //   "error"
+        // ],
+        "linebreak-style": [
+        "error",
+        "unix"
+        ],
+        "init-declarations": [
+        "error",
+        "always"
+        ],
+        "@typescript-eslint/strict-boolean-expressions" : [
+        "error"
+        // {
+        //   "allow-null-union": true,
+        //   "allow-undefined-union": true,
+        //   "allow-string": true,
+        //   "allow-enum": true,
+        //   "allow-number": true
+        // }
+        ],
+        "@typescript-eslint/no-empty-interface": [
+        "error",
+        {
+            "allowSingleExtends": true
+        }
+        ],
+        "@typescript-eslint/no-inferrable-types": [
+        "off",
+        {
+            "ignoreParameters": true,
+            "ignoreProperties": true
+        }
+        ],
+        "@typescript-eslint/restrict-template-expressions": [
+        "warn",
+        {
+            "allowNumber": true,
+            "allowBoolean": true,
+            "allowAny": false,
+            "allowNullish": true
+        }
+        ],
+        "camelcase": [
+        "warn"
+        ],
+        "eol-last": [
+        "error",
+        "always"
+        ],
+        "no-multiple-empty-lines": [
+        "error",
+        {
+            "max": 1,
+            "maxEOF": 1,
+            "maxBOF": 0
+        }
+        ]
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2020": true,
+        "jest": true
+    },
+    "plugins": [
+        "import",
+        // "react",
+        "prettier",
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "standard",
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        // "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "prettier"
+    ]
+}
